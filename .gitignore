@@ -1,12 +1,13 @@
 # Compiled class file
 *.class
-.btl
+*.btl
 .ftl
-.vm
+*.vm
+*.lst
 # Log file
 *.log
-.iml
-.1st
+*.iml
+*.1st
 # BlueJ files
 *.ctxt
 
@@ -24,3 +25,4 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+*.ftl
