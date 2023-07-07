@@ -1,0 +1,32 @@
+#spring:
+#  application:
+#    name: media-service
+#  cloud:
+#    nacos:
+#      server-addr: 192.168.207.128:8848
+#      config:
+#        namespace: a89094c1-cd49-468d-8858-63dccbb61b1c
+#        group: xuecheng
+#        file-extension: yaml
+#        refresh-enabled: true
+#        shared-configs:
+#        - data-id: logging-dev.yaml
+#          group: xuecheng-common
+#          refresh: true
+#        name: media-service-dev.yaml
+spring:
+  cloud:
+    nacos:
+      server-addr: 192.168.207.128:8848
+      config:
+        namespace: a89094c1-cd49-468d-8858-63dccbb61b1c
+        group: xuecheng
+        name: media-service-dev.yaml
+        file-extension: yaml
+        shared-configs:
+          - data-id: logging-dev.yaml
+            group: xuecheng-common
+            refresh: true
+  application:
+    name: media-service
+

@@ -1,12 +1,26 @@
-
 spring:
+  cloud:
+    nacos:
+      server-addr: 192.168.207.128:8848
+      config:
+        namespace: a89094c1-cd49-468d-8858-63dccbb61b1c
+        group: xuecheng
+        name: content-service-dev.yaml
+        file-extension: yaml
+        shared-configs:
+          - data-id: logging-dev.yaml
+            group: xuecheng-common
+            refresh: true
+      discovery:
+        namespace: a89094c1-cd49-468d-8858-63dccbb61b1c
+        group: xuecheng
   application:
     name: content-service
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.207.128:3306/xc_content?serverTimezone=UTC&userUnicode=true&useSSL=false&
-    username: root
-    password: root
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://192.168.207.128:3308/xc_content?serverTimezone=UTC&userUnicode=true&useSSL=false&
+#    username: root
+#    password: 123456
   # 日志文件配置路径
-  logging:
-    config: classpath:log4j2-dev.xml
+#  logging:
+#    config: classpath:log4j2-dev.xml
